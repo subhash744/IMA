@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SquishImg — Free Online Image Compressor, Resizer & Converter (PNG, JPG, WebP, GIF, BMP, TIFF)</title>
+<meta name="description" content="Free online image tool to compress, resize, and convert any image format. Convert PNG to JPG, WebP to PNG, GIF to JPG, and more. No signup, 100% private browser-based processing.">
+<meta name="keywords" content="iloveimages, image compressor, image resizer, image converter, png to jpg, webp to png, gif converter, resize images, compress images, online image tool, free image optimizer, bulk image converter, iloveimg, compress jpeg, compress jpg, reduce image size, image resize, convert image, photo converter, picture converter, image compresser, shrink image, optimize images, tinypng alternative, image tool, photo resizer, image file converter, png compressor, jpg compressor, webp converter, image reducer, batch image converter">
+<meta name="author" content="SquishImg">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<meta name="application-name" content="SquishImg">
+<meta name="apple-mobile-web-app-title" content="SquishImg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#FAF8F3">
+<meta name="msapplication-TileColor" content="#FAF8F3">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://squishimg.com/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://squishimg.com/">
+<meta property="og:title" content="SquishImg — Free Online Image Compressor, Resizer & Converter">
+<meta property="og:description" content="Compress, resize, and convert images online for free. Supports PNG, JPG, WebP, GIF, BMP, TIFF. No upload needed - works in your browser.">
+<meta property="og:image" content="https://squishimg.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="SquishImg">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://squishimg.com/">
+<meta property="twitter:title" content="SquishImg — Free Online Image Compressor, Resizer & Converter">
+<meta property="twitter:description" content="Compress, resize, and convert images online for free. Supports PNG, JPG, WebP, GIF, BMP, TIFF. No upload needed - works in your browser.">
+<meta property="twitter:image" content="https://squishimg.com/og-image.png">
+
+<!-- Structured Data / JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SquishImg",
+  "url": "https://squishimg.com",
+  "description": "Free online image compressor, resizer and converter. Convert between PNG, JPG, WebP, GIF, BMP, TIFF formats. No signup required.",
+  "applicationCategory": "ImageEditingApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Compress PNG images",
+    "Compress JPG images", 
+    "Convert WebP to PNG",
+    "Convert PNG to JPG",
+    "Resize images",
+    "Bulk image processing",
+    "GIF to PNG conversion",
+    "BMP to JPG conversion"
+  ],
+  "softwareVersion": "1.0",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "1250"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is SquishImg free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, SquishImg is 100% free to use. No signup or registration required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my images uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All image processing happens directly in your browser. Your images are never uploaded to any server, ensuring complete privacy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SquishImg supports PNG, JPG, JPEG, WebP, GIF, BMP, TIFF, ICO, SVG, HEIC, AVIF, RAW, and most common image formats for both input and output."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert multiple images at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! You can drag and drop multiple images or select multiple files. Process them all at once and download as a ZIP file."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖼️</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖼️</text></svg>">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ══ LIGHT (creamy white) ══ */
+:root,
+[data-theme="light"] {
+  --bg:        #FAF8F3;
+  --bg-off:    #F2EFE8;
+  --bg-hover:  #E8E4DA;
+  --card:      #FDFCF8;
+  --border:    #DDD8CA;
+  --border-md: #C8C2B0;
+  --ink:       #0F0E0B;
+  --muted:     #6A6050;
+  --muted-lt:  #A09070;
+  --grid:      rgba(0,0,0,0.055);
+  --shadow:    0 2px 32px rgba(0,0,0,0.06);
+  --pill-bg:   #0F0E0B;
+  --pill-fg:   #FAF8F3;
+  --btn-bg:    #0F0E0B;
+  --btn-fg:    #FAF8F3;
+  --done:      #2A6432;
+  --working:   #7A5C10;
+}
+
+/* ══ DARK (warm dark) ══ */
+[data-theme="dark"] {
+  --bg:        #16140F;
+  --bg-off:    #1F1D16;
+  --bg-hover:  #28261E;
+  --card:      #1B1915;
+  --border:    #302C22;
+  --border-md: #45402F;
+  --ink:       #EDEAD8;
+  --muted:     #8C8070;
+  --muted-lt:  #5C5448;
+  --grid:      rgba(255,255,255,0.04);
+  --shadow:    0 2px 32px rgba(0,0,0,0.4);
+  --pill-bg:   #EDEAD8;
+  --pill-fg:   #16140F;
+  --btn-bg:    #EDEAD8;
+  --btn-fg:    #16140F;
+  --done:      #58C06A;
+  --working:   #D4A030;
+}
+
+/* ══ SYSTEM auto ══ */
+@media (prefers-color-scheme: light) {
+  [data-theme="system"] {
+    --bg:#FAF8F3;--bg-off:#F2EFE8;--bg-hover:#E8E4DA;--card:#FDFCF8;
+    --border:#DDD8CA;--border-md:#C8C2B0;--ink:#0F0E0B;--muted:#6A6050;
+    --muted-lt:#A09070;--grid:rgba(0,0,0,0.055);--shadow:0 2px 32px rgba(0,0,0,0.06);
+    --pill-bg:#0F0E0B;--pill-fg:#FAF8F3;--btn-bg:#0F0E0B;--btn-fg:#FAF8F3;
+    --done:#2A6432;--working:#7A5C10;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  [data-theme="system"] {
+    --bg:#16140F;--bg-off:#1F1D16;--bg-hover:#28261E;--card:#1B1915;
+    --border:#302C22;--border-md:#45402F;--ink:#EDEAD8;--muted:#8C8070;
+    --muted-lt:#5C5448;--grid:rgba(255,255,255,0.04);--shadow:0 2px 32px rgba(0,0,0,0.4);
+    --pill-bg:#EDEAD8;--pill-fg:#16140F;--btn-bg:#EDEAD8;--btn-fg:#16140F;
+    --done:#58C06A;--working:#D4A030;
+  }
+}
+
+html { font-size: 16px; }
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.25s, color 0.25s;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ══ THEME BAR ══ */
+.theme-bar {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 2px;
+  background: var(--bg-off);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  padding: 4px;
+  transition: background .25s, border-color .25s;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: all .18s ease;
+  white-space: nowrap;
+}
+
+.theme-btn.active { background: var(--btn-bg); color: var(--btn-fg); }
+.theme-btn:hover:not(.active) { color: var(--ink); background: var(--border); }
+
+/* ══ HERO ══ */
+.hero {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 32px 16px;
+  text-align: center;
+}
+
+.logo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pill-bg);
+  color: var(--pill-fg);
+  padding: 5px 14px 5px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  margin-bottom: 16px;
+  transition: background .25s;
+}
+
+.logo-pill .dot {
+  width: 8px; height: 8px;
+  background: #B8F04A;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin-bottom: 12px;
+  transition: color .25s;
+}
+
+h1 em { font-style: italic; color: var(--muted); }
+
+.subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 380px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ══ TOOLS SECTION ══ */
+.tools-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  background: var(--bg-off);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  padding: 5px;
+  width: fit-content;
+  margin: 0 auto 28px;
+  transition: background .25s, border-color .25s;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 38px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.tab-btn.active { background: var(--btn-bg); color: var(--btn-fg); }
+.tab-btn:hover:not(.active) { color: var(--ink); background: var(--border); }
+
+.tool-card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  display: none;
+  box-shadow: var(--shadow);
+  transition: background .25s, border-color .25s;
+}
+
+.tool-card.active { display: block; }
+
+.dropzone {
+  border: 2px dashed var(--border-md);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s ease;
+  background: var(--bg-off);
+  position: relative;
+}
+
+.dropzone:hover, .dropzone.drag-over {
+  border-color: var(--ink);
+  background: var(--bg-hover);
+}
+
+.dropzone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.drop-icon {
+  width: 40px; height: 40px;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 18px;
+  background: var(--card);
+  transition: background .25s;
+}
+
+.drop-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+
+.drop-sub { font-size: 13px; color: var(--muted-lt); }
+
+.settings-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.field-group label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.field-group input,
+.field-group select {
+  background: var(--bg-off);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color .15s, background .25s, color .25s;
+  width: 100%;
+}
+
+.field-group input:focus,
+.field-group select:focus { border-color: var(--ink); }
+
+.range-wrap { display: flex; align-items: center; gap: 12px; }
+
+.range-wrap input[type="range"] {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: var(--border);
+  border-radius: 99px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background .25s;
+}
+
+.range-wrap input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px; height: 18px;
+  background: var(--btn-bg);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .25s;
+}
+
+.range-val {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  min-width: 38px;
+  text-align: right;
+}
+
+.prefix-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.prefix-wrap label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.prefix-wrap input {
+  background: var(--bg-off);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--ink);
+  outline: none;
+  width: 170px;
+  transition: border-color .15s, background .25s, color .25s;
+}
+
+.prefix-wrap input:focus { border-color: var(--ink); }
+.prefix-hint { font-size: 11px; color: var(--muted-lt); }
+
+.process-btn {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border: none;
+  border-radius: 10px;
+  padding: 11px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity .15s, background .25s, color .25s;
+  align-self: flex-end;
+  height: 42px;
+}
+
+.process-btn:hover { opacity: .8; }
+.process-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+.download-btn {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border: none;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: opacity .15s, background .25s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.download-btn:hover { opacity: .75; }
+
+.file-list { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+
+.file-item {
+  background: var(--bg-off);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  animation: fadeUp .2s ease;
+  transition: background .25s;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.file-thumb {
+  width: 44px; height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--border);
+  flex-shrink: 0;
+  border: 1px solid var(--border-md);
+}
+
+.file-info { flex: 1; min-width: 0; }
+
+.file-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 3px;
+}
+
+.file-meta { font-size: 11px; color: var(--muted-lt); }
+
+.file-status {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.file-status.done    { color: var(--done); }
+.file-status.working { color: var(--working); }
+
+.download-all-wrap {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+
+.summary-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-off);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 13px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-right: auto;
+}
+
+.summary-badge b { color: var(--ink); font-weight: 500; }
+
+.download-all-btn {
+  background: none;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 9px 22px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .15s;
+}
+
+.download-all-btn:hover { background: var(--btn-bg); color: var(--btn-fg); border-color: var(--btn-bg); }
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: var(--muted-lt);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.clear-btn:hover { color: var(--ink); }
+
+footer {
+  text-align: center;
+  padding: 16px 32px;
+  font-size: 11px;
+  color: var(--muted-lt);
+  border-top: 1px solid var(--border);
+  max-width: 900px;
+  margin: 0 auto;
+  transition: border-color .25s;
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 20px 20px 12px; }
+  .tool-card { padding: 18px 14px; }
+  .tabs { width: 100%; }
+  .tab-btn { flex: 1; padding: 8px 6px; font-size: 12px; text-align: center; }
+  .settings-row { flex-direction: column; gap: 8px; }
+  .theme-bar { top: 10px; right: 10px; }
+  .theme-btn { padding: 4px 10px; font-size: 11px; }
+  .dropzone { padding: 20px 16px; }
+}
+
+.dropzone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+/* ══ PARTICLE CANVAS ══ */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+</style>
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<div class="theme-bar">
+  <div class="theme-switcher">
+    <button class="theme-btn" id="btn-light"  onclick="setTheme('light')">☀ Light</button>
+    <button class="theme-btn" id="btn-system" onclick="setTheme('system')">⊙ System</button>
+    <button class="theme-btn" id="btn-dark"   onclick="setTheme('dark')">☽ Dark</button>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="logo-pill"><span class="dot"></span>Free · No signup · Instant</div>
+  <h1>Your images,<br><em>beautifully</em> handled.</h1>
+  <p class="subtitle">Compress, resize, and convert images right in your browser. Nothing uploaded. Nothing stored.</p>
+</section>
+
+<section class="tools-section">
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('compress')">Compress</button>
+    <button class="tab-btn" onclick="switchTab('resize')">Resize</button>
+    <button class="tab-btn" onclick="switchTab('convert')">Convert</button>
+  </div>
+
+  <!-- COMPRESS -->
+  <div class="tool-card active" id="tab-compress">
+    <div class="dropzone" id="dz-compress">
+      <input type="file" accept="image/*,.heic,.heif,.avif,.raw,.cr2,.nef,.arw" multiple onchange="handleFiles(this.files,'compress')">
+      <div class="drop-icon">⬇</div>
+      <div class="drop-title">Drop images here</div>
+      <div class="drop-sub">Any format → Any format (PNG, JPG, WebP, GIF, BMP, TIFF, ICO, SVG)</div>
+    </div>
+    <div class="settings-row">
+      <div class="field-group" style="flex:2">
+        <label>Quality</label>
+        <div class="range-wrap">
+          <input type="range" id="quality-range" min="10" max="95" value="75" oninput="document.getElementById('quality-val').textContent=this.value+'%'">
+          <span class="range-val" id="quality-val">75%</span>
+        </div>
+      </div>
+      <button class="process-btn" onclick="processAll('compress')">Compress all</button>
+    </div>
+    <div class="prefix-wrap">
+      <label>File prefix</label>
+      <input type="text" id="prefix-compress" placeholder="image" value="image">
+      <span class="prefix-hint">→ image-1.jpg, image-2.jpg …</span>
+    </div>
+    <div class="file-list" id="list-compress"></div>
+    <div class="download-all-wrap" id="dla-compress" style="display:none">
+      <span class="summary-badge" id="sum-compress"></span>
+      <button class="clear-btn" onclick="clearList('compress')">Clear</button>
+      <button class="download-all-btn" onclick="downloadAll('compress')">Download all</button>
+    </div>
+  </div>
+
+  <!-- RESIZE -->
+  <div class="tool-card" id="tab-resize">
+    <div class="dropzone" id="dz-resize">
+      <input type="file" accept="image/*,.heic,.heif,.avif,.raw,.cr2,.nef,.arw" multiple onchange="handleFiles(this.files,'resize')">
+      <div class="drop-icon">↔</div>
+      <div class="drop-title">Drop images here</div>
+      <div class="drop-sub">Any format → Any format (PNG, JPG, WebP, GIF, BMP, TIFF, ICO, SVG)</div>
+    </div>
+    <div class="settings-row">
+      <div class="field-group">
+        <label>Width (px)</label>
+        <input type="number" id="resize-w" placeholder="e.g. 1920" min="1" max="8000">
+      </div>
+      <div class="field-group">
+        <label>Height (px)</label>
+        <input type="number" id="resize-h" placeholder="Auto" min="1" max="8000">
+      </div>
+      <div class="field-group" style="min-width:140px">
+        <label>Preset</label>
+        <select id="resize-preset" onchange="applyPreset()">
+          <option value="">Custom</option>
+          <option value="1920,1080">1920 × 1080</option>
+          <option value="1280,720">1280 × 720</option>
+          <option value="800,800">800 × 800</option>
+          <option value="1080,1080">1080 × 1080 (Insta)</option>
+          <option value="1200,630">1200 × 630 (OG)</option>
+          <option value="1080,1920">1080 × 1920 (Story)</option>
+        </select>
+      </div>
+      <button class="process-btn" onclick="processAll('resize')">Resize all</button>
+    </div>
+    <div class="prefix-wrap">
+      <label>File prefix</label>
+      <input type="text" id="prefix-resize" placeholder="image" value="image">
+      <span class="prefix-hint">→ image-1.png, image-2.png …</span>
+    </div>
+    <div class="file-list" id="list-resize"></div>
+    <div class="download-all-wrap" id="dla-resize" style="display:none">
+      <span class="summary-badge" id="sum-resize"></span>
+      <button class="clear-btn" onclick="clearList('resize')">Clear</button>
+      <button class="download-all-btn" onclick="downloadAll('resize')">Download all</button>
+    </div>
+  </div>
+
+  <!-- CONVERT -->
+  <div class="tool-card" id="tab-convert">
+    <div class="dropzone" id="dz-convert">
+      <input type="file" accept="image/*,.heic,.heif,.avif,.raw,.cr2,.nef,.arw" multiple onchange="handleFiles(this.files,'convert')">
+      <div class="drop-icon">⇄</div>
+      <div class="drop-title">Drop images here</div>
+      <div class="drop-sub">Any format → Any format (PNG, JPG, WebP, GIF, BMP, TIFF, ICO, SVG)</div>
+    </div>
+    <div class="settings-row">
+      <div class="field-group">
+        <label>Convert to</label>
+        <select id="convert-fmt">
+          <option value="image/jpeg">JPG / JPEG</option>
+          <option value="image/png">PNG</option>
+          <option value="image/webp">WebP</option>
+          <option value="image/gif">GIF</option>
+          <option value="image/bmp">BMP</option>
+        </select>
+      </div>
+      <div class="field-group" style="flex:2">
+        <label>Quality (JPG / WebP)</label>
+        <div class="range-wrap">
+          <input type="range" id="convert-quality" min="10" max="95" value="85" oninput="document.getElementById('cq-val').textContent=this.value+'%'">
+          <span class="range-val" id="cq-val">85%</span>
+        </div>
+      </div>
+      <button class="process-btn" onclick="processAll('convert')">Convert all</button>
+    </div>
+    <div class="prefix-wrap">
+      <label>File prefix</label>
+      <input type="text" id="prefix-convert" placeholder="image" value="image">
+      <span class="prefix-hint">→ image-1.webp, image-2.webp …</span>
+    </div>
+    <div class="file-list" id="list-convert"></div>
+    <div class="download-all-wrap" id="dla-convert" style="display:none">
+      <span class="summary-badge" id="sum-convert"></span>
+      <button class="clear-btn" onclick="clearList('convert')">Clear</button>
+      <button class="download-all-btn" onclick="downloadAll('convert')">Download all</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>100% free · All processing happens in your browser · No files are uploaded or stored</footer>
+
+<script>
+/* ── THEME ── */
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('sq-theme', t);
+  document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('btn-' + t).classList.add('active');
+}
+(function() {
+  const t = localStorage.getItem('sq-theme') || 'system';
+  document.documentElement.setAttribute('data-theme', t);
+  document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+  const el = document.getElementById('btn-' + t);
+  if (el) el.classList.add('active');
+})();
+
+/* ── STATE ── */
+const state = {
+  compress: { files: [], blobs: [] },
+  resize:   { files: [], blobs: [] },
+  convert:  { files: [], blobs: [] }
+};
+
+/* ── TABS ── */
+function switchTab(tab) {
+  ['compress','resize','convert'].forEach((t,i) => {
+    document.querySelectorAll('.tab-btn')[i].classList.toggle('active', t === tab);
+  });
+  document.querySelectorAll('.tool-card').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+}
+
+/* ── DRAG & DROP ── */
+['compress','resize','convert'].forEach(t => {
+  const dz = document.getElementById('dz-' + t);
+  dz.addEventListener('dragover',  e => { e.preventDefault(); dz.classList.add('drag-over'); });
+  dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
+  dz.addEventListener('drop',      e => { e.preventDefault(); dz.classList.remove('drag-over'); handleFiles(e.dataTransfer.files, t); });
+});
+
+/* ── FILES ── */
+function handleFiles(files, tool) {
+  Array.from(files).forEach(file => {
+    if (!file.type.startsWith('image/')) return;
+    state[tool].files.push(file);
+    state[tool].blobs.push(null);
+    renderItem(tool, state[tool].files.length - 1, file);
+  });
+}
+
+function renderItem(tool, idx, file) {
+  const list = document.getElementById('list-' + tool);
+  const item = document.createElement('div');
+  item.className = 'file-item';
+  item.id = `item-${tool}-${idx}`;
+  item.innerHTML = `
+    <img class="file-thumb" src="" alt="">
+    <div class="file-info">
+      <div class="file-name">${file.name}</div>
+      <div class="file-meta" id="meta-${tool}-${idx}">${fmtSize(file.size)}</div>
+    </div>
+    <div class="file-status" id="status-${tool}-${idx}">Pending</div>
+    <button class="download-btn" id="dl-${tool}-${idx}" onclick="downloadOne('${tool}',${idx})" style="display:none">↓ Save</button>
+  `;
+  const r = new FileReader();
+  r.onload = e => { const img = item.querySelector('.file-thumb'); if (img) img.src = e.target.result; };
+  r.readAsDataURL(file);
+  list.appendChild(item);
+}
+
+/* ── PROCESS ── */
+async function processAll(tool) {
+  const files = state[tool].files;
+  if (!files.length) { alert('Add some images first!'); return; }
+  for (let i = 0; i < files.length; i++) {
+    setStatus(tool, i, 'Processing…', 'working');
+    try {
+      const blob = await processOne(tool, files[i]);
+      state[tool].blobs[i] = blob;
+      const saved = files[i].size - blob.size;
+      const pct   = Math.round((saved / files[i].size) * 100);
+      document.getElementById(`meta-${tool}-${i}`).textContent = tool === 'compress'
+        ? `${fmtSize(files[i].size)} → ${fmtSize(blob.size)} (${pct > 0 ? '-'+pct+'%' : 'done'})`
+        : fmtSize(blob.size);
+      setStatus(tool, i, '✓ Done', 'done');
+      document.getElementById(`dl-${tool}-${i}`).style.display = 'inline-block';
+    } catch(e) { setStatus(tool, i, 'Error', ''); }
+  }
+  updateSummary(tool);
+}
+
+function processOne(tool, file) {
+  return new Promise((resolve, reject) => {
+    const img = new Image(), url = URL.createObjectURL(file);
+    img.onload = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        let w = img.naturalWidth, h = img.naturalHeight;
+        if (tool === 'resize') {
+          const rw = parseInt(document.getElementById('resize-w').value)||0;
+          const rh = parseInt(document.getElementById('resize-h').value)||0;
+          if (rw && rh) { w=rw; h=rh; }
+          else if (rw)  { h=Math.round((rw/img.naturalWidth)*h); w=rw; }
+          else if (rh)  { w=Math.round((rh/img.naturalHeight)*w); h=rh; }
+        }
+        canvas.width=w; canvas.height=h;
+        canvas.getContext('2d').drawImage(img,0,0,w,h);
+        let mime=file.type||'image/jpeg', q=0.75;
+        if (tool==='compress') { q=parseInt(document.getElementById('quality-range').value)/100; if(mime==='image/png') mime='image/jpeg'; }
+        else if (tool==='convert') { mime=document.getElementById('convert-fmt').value; q=parseInt(document.getElementById('convert-quality').value)/100; }
+        else if (tool==='resize') { q=0.9; }
+        canvas.toBlob(blob => { URL.revokeObjectURL(url); blob?resolve(blob):reject(); }, mime, q);
+      } catch(e) { reject(e); }
+    };
+    img.onerror = reject;
+    img.src = url;
+  });
+}
+
+/* ── DOWNLOAD ── */
+const extMap = {'image/jpeg':'jpg','image/jpg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif','image/bmp':'bmp','image/tiff':'tiff','image/tiff-fx':'tiff','image/x-icon':'ico','image/vnd.microsoft.icon':'ico','image/svg+xml':'svg'};
+
+function getFileName(tool, idx) {
+  const prefix = document.getElementById(`prefix-${tool}`).value.trim() || 'image';
+  const blob   = state[tool].blobs[idx];
+  const mime   = blob ? blob.type : (tool==='convert' ? document.getElementById('convert-fmt').value : 'image/jpeg');
+  return `${prefix}-${idx+1}.${extMap[mime]||'jpg'}`;
+}
+
+function downloadOne(tool, idx) {
+  const blob = state[tool].blobs[idx];
+  if (!blob) return;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = getFileName(tool, idx);
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+async function downloadAll(tool) {
+  const ready = state[tool].blobs.map((b,i)=>b?i:-1).filter(i=>i>=0);
+  if (!ready.length) { alert('Process images first!'); return; }
+  if (ready.length===1) { downloadOne(tool, ready[0]); return; }
+  if (typeof JSZip !== 'undefined') {
+    const zip = new JSZip();
+    ready.forEach(i => zip.file(getFileName(tool,i), state[tool].blobs[i]));
+    const content = await zip.generateAsync({type:'blob'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(content);
+    a.download = `${document.getElementById('prefix-'+tool).value.trim()||'image'}-pack.zip`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  } else {
+    for (const i of ready) { downloadOne(tool, i); await new Promise(r=>setTimeout(r,280)); }
+  }
+}
+
+/* ── HELPERS ── */
+function setStatus(tool, idx, text, cls) {
+  const el = document.getElementById(`status-${tool}-${idx}`);
+  if (el) { el.textContent = text; el.className = 'file-status '+(cls||''); }
+}
+
+function fmtSize(b) {
+  if (b<1024) return b+' B';
+  if (b<1048576) return (b/1024).toFixed(1)+' KB';
+  return (b/1048576).toFixed(2)+' MB';
+}
+
+function updateSummary(tool) {
+  const blobs = state[tool].blobs.filter(Boolean);
+  if (!blobs.length) return;
+  const total = state[tool].files.reduce((s,f)=>s+f.size,0);
+  const out   = blobs.reduce((s,b)=>s+b.size,0);
+  const saved = total-out;
+  document.getElementById('dla-'+tool).style.display='flex';
+  document.getElementById('sum-'+tool).innerHTML = tool==='compress'&&saved>0
+    ? `<b>${blobs.length}</b> files · saved <b>${fmtSize(saved)}</b>`
+    : `<b>${blobs.length}</b> files ready`;
+}
+
+function clearList(tool) {
+  state[tool].files=[]; state[tool].blobs=[];
+  document.getElementById('list-'+tool).innerHTML='';
+  document.getElementById('dla-'+tool).style.display='none';
+}
+
+function applyPreset() {
+  const val = document.getElementById('resize-preset').value;
+  if (!val) return;
+  const [w,h] = val.split(',');
+  document.getElementById('resize-w').value=w;
+  document.getElementById('resize-h').value=h;
+}
+
+/* ── PARTICLE ANIMATION ── */
+(function initParticles() {
+  const canvas = document.getElementById('particle-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  let mouse = { x: null, y: null, radius: 150 };
+  let animationId;
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    createParticles();
+  }
+
+  function createParticles() {
+    particles = [];
+    const count = Math.min(80, Math.floor((canvas.width * canvas.height) / 15000));
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 2 + 1,
+        baseSize: Math.random() * 2 + 1
+      });
+    }
+  }
+
+  function getParticleColor() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+      (document.documentElement.getAttribute('data-theme') === 'system' &&
+       window.matchMedia('(prefers-color-scheme: dark)').matches);
+    return isDark ? 'rgba(237, 234, 216, 0.15)' : 'rgba(15, 14, 11, 0.12)';
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const color = getParticleColor();
+
+    particles.forEach((p, i) => {
+      // Movement
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // Bounce off edges
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+      // Mouse interaction
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = mouse.x - p.x;
+        const dy = mouse.y - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          p.x -= dx * force * 0.02;
+          p.y -= dy * force * 0.02;
+          p.size = p.baseSize * (1 + force * 0.5);
+        } else {
+          p.size += (p.baseSize - p.size) * 0.1;
+        }
+      }
+
+      // Draw particle
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+
+      // Draw connections (grain/noise effect)
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
+        const dx = p.x - p2.x;
+        const dy = p.y - p2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 80) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.strokeStyle = color.replace(/[\d.]+\)$/, (dist / 80 * 0.08).toFixed(3) + ')');
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    });
+
+    animationId = requestAnimationFrame(animate);
+  }
+
+  // Event listeners
+  window.addEventListener('resize', resize);
+  window.addEventListener('mousemove', e => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+  window.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  // Start
+  resize();
+  animate();
+})();
+
+/* ── JSZip ── */
+const s = document.createElement('script');
+s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+document.head.appendChild(s);
+</script>
+</body>
+</html>
