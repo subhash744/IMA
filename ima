@@ -18,14 +18,14 @@
 <meta name="msapplication-TileColor" content="#FAF8F3">
 
 <!-- Canonical URL -->
-<link rel="canonical" href="https://squishimg.com/">
+<link rel="canonical" href="https://iloveimgs.vercel.app/">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://squishimg.com/">
+<meta property="og:url" content="https://iloveimgs.vercel.app/">
 <meta property="og:title" content="SquishImg — Free Online Image Compressor, Resizer & Converter">
 <meta property="og:description" content="Compress, resize, and convert images online for free. Supports PNG, JPG, WebP, GIF, BMP, TIFF. No upload needed - works in your browser.">
-<meta property="og:image" content="https://squishimg.com/og-image.png">
+<meta property="og:image" content="https://iloveimgs.vercel.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="SquishImg">
@@ -33,10 +33,10 @@
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://squishimg.com/">
+<meta property="twitter:url" content="https://iloveimgs.vercel.app/">
 <meta property="twitter:title" content="SquishImg — Free Online Image Compressor, Resizer & Converter">
 <meta property="twitter:description" content="Compress, resize, and convert images online for free. Supports PNG, JPG, WebP, GIF, BMP, TIFF. No upload needed - works in your browser.">
-<meta property="twitter:image" content="https://squishimg.com/og-image.png">
+<meta property="twitter:image" content="https://iloveimgs.vercel.app/og-image.png">
 
 <!-- Structured Data / JSON-LD -->
 <script type="application/ld+json">
@@ -44,7 +44,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "SquishImg",
-  "url": "https://squishimg.com",
+  "url": "https://iloveimgs.vercel.app",
   "description": "Free online image compressor, resizer and converter. Convert between PNG, JPG, WebP, GIF, BMP, TIFF formats. No signup required.",
   "applicationCategory": "ImageEditingApplication",
   "operatingSystem": "Any",
@@ -112,32 +112,125 @@
 }
 </script>
 
-<!-- Preconnect for performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-<!-- Vercel Web Analytics - Injected automatically on Vercel deploy -->
+<!-- Custom Analytics - Zero external requests, stores locally -->
 <script>
-  // Analytics loads automatically when deployed to Vercel
-  // No 404 errors locally - Vercel injects this at build time
-  if (window.location.hostname.includes('vercel.app') || 
-      window.location.hostname === 'squishimg.com') {
-    const script = document.createElement('script');
-    script.src = '/va/script.js';
-    script.defer = true;
-    document.head.appendChild(script);
-  }
+(function() {
+  const DB_NAME = 'squishimg_analytics';
+  const SESSION_START = Date.now();
+  
+  // Initialize storage
+  let data = JSON.parse(localStorage.getItem(DB_NAME) || '{"sessions":[],"events":[],"firstVisit":"' + new Date().toISOString() + '"}');
+  
+  // Track this session
+  const session = {
+    id: Math.random().toString(36).substr(2, 9),
+    start: new Date().toISOString(),
+    path: location.pathname,
+    referrer: document.referrer || 'direct',
+    device: navigator.userAgent.includes('Mobile') ? 'mobile' : 'desktop'
+  };
+  data.sessions.push(session);
+  
+  // Save helper
+  const save = () => localStorage.setItem(DB_NAME, JSON.stringify(data));
+  
+  // Track events
+  const track = (event, details = {}) => {
+    data.events.push({
+      session: session.id,
+      event: event,
+      time: new Date().toISOString(),
+      details: details
+    });
+    save();
+  };
+  
+  // Page load
+  track('pageview', { url: location.href });
+  
+  // Track clicks on buttons
+  document.addEventListener('click', (e) => {
+    if (e.target.matches('.process-btn')) track('process', { tool: e.target.textContent });
+    if (e.target.matches('.tab-btn')) track('tab_switch', { tab: e.target.textContent });
+    if (e.target.matches('.download-btn')) track('download_single');
+    if (e.target.matches('.download-all-btn')) track('download_all');
+  });
+  
+  // Track file drops
+  ['compress','resize','convert'].forEach(tool => {
+    const dz = document.getElementById('dz-' + tool);
+    if (dz) {
+      dz.addEventListener('drop', (e) => {
+        const files = e.dataTransfer?.files?.length || 0;
+        track('files_dropped', { tool: tool, count: files });
+      });
+    }
+  });
+  
+  // Track session end
+  window.addEventListener('beforeunload', () => {
+    session.duration = Date.now() - SESSION_START;
+    save();
+  });
+  
+  // Save initially
+  save();
+  
+  // Make analytics available globally
+  window.SquishAnalytics = {
+    track: track,
+    getStats: function() {
+      const sessions = data.sessions.length;
+      const events = data.events.length;
+      const pageviews = data.events.filter(e => e.event === 'pageview').length;
+      const processes = data.events.filter(e => e.event === 'process').length;
+      const downloads = data.events.filter(e => e.event.includes('download')).length;
+      const files = data.events.filter(e => e.event === 'files_dropped').reduce((sum, e) => sum + (e.details.count || 0), 0);
+      
+      return {
+        totalSessions: sessions,
+        totalEvents: events,
+        pageViews: pageviews,
+        filesProcessed: processes,
+        downloads: downloads,
+        filesDropped: files,
+        firstVisit: data.firstVisit,
+        lastSession: session.start
+      };
+    },
+    showDashboard: function() {
+      const s = this.getStats();
+      console.log('%c📊 SquishImg Analytics Dashboard', 'font-size: 20px; font-weight: bold; color: #B8F04A;');
+      console.table({
+        'Total Sessions': s.totalSessions,
+        'Page Views': s.pageViews,
+        'Files Processed': s.filesProcessed,
+        'Downloads': s.downloads,
+        'Files Dropped': s.filesDropped,
+        'First Visit': new Date(s.firstVisit).toLocaleDateString(),
+        'Last Session': new Date(s.lastSession).toLocaleString()
+      });
+      console.log('Run SquishAnalytics.export() to get raw data');
+    },
+    export: function() {
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'squishimg-analytics-' + new Date().toISOString().split('T')[0] + '.json';
+      a.click();
+    },
+    clear: function() {
+      if(confirm('Clear all analytics data?')) {
+        localStorage.removeItem(DB_NAME);
+        location.reload();
+      }
+    }
+  };
+  
+  // Auto-show dashboard on load (dev mode)
+  console.log('%c📈 Analytics ready. Run SquishAnalytics.showDashboard() to see stats.', 'color: #6A6050; font-style: italic;');
+})();
 </script>
-
-<!-- Google Analytics 4 (Optional - Replace GA_MEASUREMENT_ID with your ID) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_MEASUREMENT_ID');
-</script> -->
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖼️</text></svg>">
